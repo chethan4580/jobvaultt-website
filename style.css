@@ -45,8 +45,9 @@ nav a:hover {
 
 /* ================= CONTAINER ================= */
 .container {
-    width: 85%;
-    margin: 40px auto;
+    max-width: 1500px;   /* Big professional width */
+    width: 95%;
+    margin: 30px auto;
 }
 
 /* Make full card clickable */
