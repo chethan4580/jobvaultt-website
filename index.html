@@ -2,135 +2,229 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JobCode - Job Listings</title>
-    <link rel="icon" type="image/png"href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobVaultt - Job Listings</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <div class="logo">
-        <img src="images/Job-vaultt-logo.png" alt="JobVaultt Logo">
-        </div>
-        <nav>
-            <a href="#" onclick="filterJobs('all')">Home</a>
-            <a href="#" onclick="filterJobs('freshers')">Freshers</a>
-            <a href="#" onclick="filterJobs('internships')">Internships</a>
-            <a href="#" onclick="filterJobs('experienced')">Experienced</a>
-            <a href="#" onclick="filterJobs('Non-IT')">Non-IT</a>
-            
-        </nav>
-    </header>
+<header class="navbar">
 
-    <!-- Job Container -->
-    <div class="container">
-
-        <!-- Job Card 1 -->
-        <a href="job1.html" class="job-link" data-category="freshers experienced">
-            <div class="job-card">
-                <div class="job-image">
-                    <img src="images/astrazeneca.png" alt="AstraZeneca Logo" class="company-logo">
-                </div>
-
-                <div class="job-content">
-                    <div class="tags">
-                        <span>FRESHERS</span>
-                        <span>EXPERIENCED</span>
-                    </div>
-
-                    <h2>Data Analyst Job at AstraZeneca India – Apply Now</h2>
-                    <p>
-                        If you are looking for a high-impact Data Analyst role in the pharmaceutical 
-                        and healthcare industry, this opportunity at AstraZeneca India can be a great fit.
-                    </p>
-
-                    <div class="job-meta">
-                        <span>👤 Chandan Mahato</span>
-                        <span>📅 February 23, 2026</span>
-                    </div>
-                </div>
-            </div>
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/Job-Vaultt-logo.png" alt="JobVaultt">
         </a>
-
-        <!-- Job Card 2 -->
-        <a href="job2.html" class="job-link" data-category="Non-IT">
-            <div class="job-card">
-                <div class="job-image">
-                    <h2>CYIENT</h2>
-                    <p>AI/ML Engineer Opportunity</p>
-                </div>
-
-                <div class="job-content">
-                    <div class="tags">
-                        <span>Non-IT</span>
-                    </div>
-
-                    <h2>Cyient Freshers AI/ML Engineer Opportunity – Champ-AI-n Challenge</h2>
-                    <p>
-                        If you are passionate about Artificial Intelligence, Machine Learning, 
-                        Cloud, and Cyber Security, then this opportunity is for you.
-                    </p>
-
-                    <div class="job-meta">
-                        <span>👤 Chandan Mahato</span>
-                        <span>📅 February 22, 2026</span>
-                    </div>
-                </div>
-            </div>
-        </a>
-
-        <!-- Job Card 3 -->
-        <a href="job3.html" class="job-link" data-category="freshers internships">
-            <div class="job-card">
-                <div class="job-image">
-                    <h2>CGI</h2>
-                    <p>Service Desk Technician – L1 Support</p>
-                </div>
-
-                <div class="job-content">
-                    <div class="tags">
-                        <span>FRESHERS</span>
-                        <span>INTERNSHIPS</span>
-                    </div>
-
-                    <h2>Fresher Service Desk Technician – Full Time Opportunity</h2>
-                    <p>
-                        If you are a recent graduate looking to begin your career in IT support 
-                        and helpdesk operations, this role is a perfect start.
-                    </p>
-
-                    <div class="job-meta">
-                        <span>👤 Chandan Mahato</span>
-                        <span>📅 February 22, 2026</span>
-                    </div>
-                </div>
-            </div>
-        </a>
-
     </div>
 
-    <!-- Filtering Script -->
-    <script>
-        function filterJobs(category) {
+    <!-- Desktop Menu -->
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="filterJobs('freshers', event)">Freshers</a>
+        <a href="#" onclick="filterJobs('internships', event)">Internships</a>
+        <a href="#" onclick="filterJobs('experienced', event)">Experienced</a>
+        <a href="#" onclick="filterJobs('non-it', event)">Non-IT</a>
+    </nav>
 
-            const jobs = document.querySelectorAll('.job-link');
+<div class="nav-icons">
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <span class="search-icon" onclick="toggleSearch()">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search jobs...">
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+</div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="filterJobs('freshers', event)">Freshers</a>
+        <a href="#" onclick="filterJobs('internships', event)">Internships</a>
+        <a href="#" onclick="filterJobs('experienced', event)">Experienced</a>
+        <a href="#" onclick="filterJobs('non-it', event)">Non-IT</a>
+    </div>
+
+</header>
+
+<!-- Job Container -->
+<div class="container">
+
+    <!-- Job Card 1 -->
+    <a href="job1.html" class="job-link" data-category="freshers experienced">
+        <div class="job-card">
+            <div class="job-image">
+                <img src="images/astrazeneca.png" alt="AstraZeneca Logo" class="company-logo">
+            </div>
+
+            <div class="job-content">
+                <div class="tags">
+                    <span>FRESHERS</span>
+                    <span>EXPERIENCED</span>
+                </div>
+
+                <h2>Data Analyst Job at AstraZeneca India – Apply Now</h2>
+                <p>
+                    If you are looking for a high-impact Data Analyst role in the pharmaceutical 
+                    and healthcare industry, this opportunity at AstraZeneca India can be a great fit.
+                </p>
+
+                <div class="job-meta">
+                    <span>👤 Chandan Mahato</span>
+                    <span>📅 February 23, 2026</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Job Card 2 -->
+    <a href="job2.html" class="job-link" data-category="non-it">
+        <div class="job-card">
+            <div class="job-image">
+                <h2>CYIENT</h2>
+                <p>AI/ML Engineer Opportunity</p>
+            </div>
+
+            <div class="job-content">
+                <div class="tags">
+                    <span>NON-IT</span>
+                </div>
+
+                <h2>Cyient Freshers AI/ML Engineer Opportunity – Champ-AI-n Challenge</h2>
+                <p>
+                    If you are passionate about Artificial Intelligence, Machine Learning, 
+                    Cloud, and Cyber Security, then this opportunity is for you.
+                </p>
+
+                <div class="job-meta">
+                    <span>👤 Chandan Mahato</span>
+                    <span>📅 February 22, 2026</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Job Card 3 -->
+    <a href="job3.html" class="job-link" data-category="freshers internships">
+        <div class="job-card">
+            <div class="job-image">
+                <h2>CGI</h2>
+                <p>Service Desk Technician – L1 Support</p>
+            </div>
+
+            <div class="job-content">
+                <div class="tags">
+                    <span>FRESHERS</span>
+                    <span>INTERNSHIPS</span>
+                </div>
+
+                <h2>Fresher Service Desk Technician – Full Time Opportunity</h2>
+                <p>
+                    If you are a recent graduate looking to begin your career in IT support 
+                    and helpdesk operations, this role is a perfect start.
+                </p>
+
+                <div class="job-meta">
+                    <span>👤 Chandan Mahato</span>
+                    <span>📅 February 22, 2026</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+</div>
+
+<!-- Script -->
+<script>
+
+/* ================= CATEGORY FILTER ================= */
+function filterJobs(category, event) {
+
+    if (event) event.preventDefault();
+
+    const jobs = document.querySelectorAll('.job-link');
+
+    jobs.forEach(job => {
+        const categories = job.getAttribute('data-category');
+
+        if (category === 'all') {
+            job.style.display = "block";
+        } 
+        else if (categories && categories.toLowerCase().includes(category)) {
+            job.style.display = "block";
+        } 
+        else {
+            job.style.display = "none";
+        }
+    });
+
+    const menu = document.getElementById("mobileMenu");
+    if (menu) menu.classList.remove("show");
+}
+
+/* ================= MOBILE MENU ================= */
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if (menu) menu.classList.toggle("show");
+}
+
+/* ================= SEARCH TOGGLE ================= */
+function toggleSearch() {
+    const wrapper = document.querySelector(".search-wrapper");
+    const input = document.getElementById("searchInput");
+
+    if (!wrapper) return;
+
+    wrapper.classList.toggle("active");
+
+    if (wrapper.classList.contains("active")) {
+        input.focus();
+    }
+}
+
+/* ================= SEARCH FUNCTION ================= */
+document.addEventListener("DOMContentLoaded", function() {
+
+    const searchInput = document.getElementById("searchInput");
+
+    if (searchInput) {
+        searchInput.addEventListener("keyup", function() {
+
+            let filter = this.value.toLowerCase();
+            let jobs = document.querySelectorAll(".job-link");
 
             jobs.forEach(job => {
-                const categories = job.getAttribute('data-category');
 
-                if (category === 'all') {
+                let titleElement = job.querySelector("h2");
+                if (!titleElement) return;
+
+                let title = titleElement.innerText.toLowerCase();
+
+                if (title.includes(filter)) {
                     job.style.display = "block";
-                } 
-                else if (categories && categories.includes(category)) {
-                    job.style.display = "block";
-                } 
-                else {
+                } else {
                     job.style.display = "none";
                 }
-            });
-        }
-    </script>
 
+            });
+
+        });
+    }
+
+    /* Close search when clicking outside (WITHOUT resetting jobs) */
+    document.addEventListener("click", function(e) {
+        const wrapper = document.querySelector(".search-wrapper");
+
+        if (!wrapper) return;
+
+        if (!wrapper.contains(e.target)) {
+            wrapper.classList.remove("active");
+        }
+    });
+
+});
+</script>
 </body>
 </html>
