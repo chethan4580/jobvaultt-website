@@ -3,11 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
     background: #f4f4f4;
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c2c2c;
 }
 
 /* ================= NAVBAR ================= */
@@ -15,21 +17,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    height: 70px;              /* Fixed navbar height */
-    padding: 0 80px;           /* Only left-right padding */
+    height: 70px;
+    padding: 0 80px;
     background: white;
     border-bottom: 1px solid #ddd;
 }
 
-/* Logo */
 .logo img {
-    height: 180px;              /* Bigger logo */
+    height: 180px;
     width: auto;
     display: block;
 }
 
-/* Navigation Links */
 nav a {
     margin-left: 25px;
     text-decoration: none;
@@ -45,19 +44,24 @@ nav a:hover {
 
 /* ================= CONTAINER ================= */
 .container {
-    max-width: 1500px;   /* Big professional width */
+    max-width: 1500px;
     width: 95%;
     margin: 30px auto;
 }
 
-/* Make full card clickable */
+/* Job Details Container */
+.job-details {
+    background: white;
+    padding: 40px 60px;
+}
+
+/* ================= JOB CARD ================= */
 .job-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-/* ================= JOB CARD ================= */
 .job-card {
     display: flex;
     background: white;
@@ -69,18 +73,15 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
-/* Hover Effect */
 .job-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-/* ================= LEFT SIDE ================= */
 .job-image {
     width: 27%;
 }
 
-/* Company Image */
 .company-logo,
 .company-banner {
     width: 100%;
@@ -88,13 +89,11 @@ nav a:hover {
     object-fit: cover;
 }
 
-/* ================= RIGHT SIDE ================= */
 .job-content {
     width: 65%;
     padding: 30px;
 }
 
-/* Tags */
 .tags span {
     background: black;
     color: white;
@@ -104,32 +103,124 @@ nav a:hover {
     border-radius: 3px;
 }
 
-/* Title */
 .job-content h2 {
     margin: 12px 0;
     font-size: 20px;
 }
 
-/* Description */
 .job-content p {
     color: #444;
     line-height: 1.5;
     font-size: 15px;
 }
 
-/* Meta */
 .job-meta {
     margin-top: 15px;
     font-size: 13px;
     color: #777;
 }
 
-.job-meta span {
-    margin-right: 15px;
+/* ================= JOB DETAILS PAGE ================= */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.title-image {
+    margin: 15px 0 25px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.title-image img {
+    width: 65%;
+    max-width: 850px;
+    height: 550px;
+    border-radius: 12px;
+}
+
+.section {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 2px solid #555;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin: 8px 0 12px 20px;
+}
+
+li {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.overview-box {
+    border: 1px solid #ddd;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: #fafafa;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+table th,
+table td {
+    border: 1.5px solid #222;
+    padding: 10px;
+}
+
+table th {
+    background: #f0f0f0;
+    font-weight: 600;
+}
+
+.apply-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: #01155b;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease;
+}
+
+.apply-btn:hover {
+    background: #0b0943;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #e60023;
+    font-weight: 500;
 }
 
 /* ================= RESPONSIVE ================= */
-@media(max-width: 900px) {
+@media (max-width: 900px) {
 
     header {
         padding: 0 20px;
@@ -152,5 +243,42 @@ nav a:hover {
     nav a {
         margin-left: 15px;
         font-size: 14px;
+    }
+}
+
+/* ================= MOBILE IMPROVEMENT ================= */
+@media (max-width: 768px) {
+
+    .job-details {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p, li {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .title-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    table th,
+    table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .apply-btn {
+        font-size: 15px;
+        padding: 10px 25px;
     }
 }
