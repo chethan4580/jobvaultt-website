@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JobCode - Job Listings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+        <img src="images/Job-vaultt-logo.png" alt="JobVaultt Logo">
+        </div>
+        <nav>
+            <a href="#" onclick="filterJobs('all')">Home</a>
+            <a href="#" onclick="filterJobs('freshers')">Freshers</a>
+            <a href="#" onclick="filterJobs('internships')">Internships</a>
+            <a href="#" onclick="filterJobs('experienced')">Experienced</a>
+            <a href="#" onclick="filterJobs('Non-IT')">Non-IT</a>
+            
+        </nav>
+    </header>
+
+    <!-- Job Container -->
+    <div class="container">
+
+        <!-- Job Card 1 -->
+        <a href="job1.html" class="job-link" data-category="freshers experienced">
+            <div class="job-card">
+                <div class="job-image">
+                    <img src="images/astrazeneca.png" alt="AstraZeneca Logo" class="company-logo">
+                </div>
+
+                <div class="job-content">
+                    <div class="tags">
+                        <span>FRESHERS</span>
+                        <span>EXPERIENCED</span>
+                    </div>
+
+                    <h2>Data Analyst Job at AstraZeneca India – Apply Now</h2>
+                    <p>
+                        If you are looking for a high-impact Data Analyst role in the pharmaceutical 
+                        and healthcare industry, this opportunity at AstraZeneca India can be a great fit.
+                    </p>
+
+                    <div class="job-meta">
+                        <span>👤 Chandan Mahato</span>
+                        <span>📅 February 23, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Job Card 2 -->
+        <a href="job2.html" class="job-link" data-category="Non-IT">
+            <div class="job-card">
+                <div class="job-image">
+                    <h2>CYIENT</h2>
+                    <p>AI/ML Engineer Opportunity</p>
+                </div>
+
+                <div class="job-content">
+                    <div class="tags">
+                        <span>Non-IT</span>
+                    </div>
+
+                    <h2>Cyient Freshers AI/ML Engineer Opportunity – Champ-AI-n Challenge</h2>
+                    <p>
+                        If you are passionate about Artificial Intelligence, Machine Learning, 
+                        Cloud, and Cyber Security, then this opportunity is for you.
+                    </p>
+
+                    <div class="job-meta">
+                        <span>👤 Chandan Mahato</span>
+                        <span>📅 February 22, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Job Card 3 -->
+        <a href="job3.html" class="job-link" data-category="freshers internships">
+            <div class="job-card">
+                <div class="job-image">
+                    <h2>CGI</h2>
+                    <p>Service Desk Technician – L1 Support</p>
+                </div>
+
+                <div class="job-content">
+                    <div class="tags">
+                        <span>FRESHERS</span>
+                        <span>INTERNSHIPS</span>
+                    </div>
+
+                    <h2>Fresher Service Desk Technician – Full Time Opportunity</h2>
+                    <p>
+                        If you are a recent graduate looking to begin your career in IT support 
+                        and helpdesk operations, this role is a perfect start.
+                    </p>
+
+                    <div class="job-meta">
+                        <span>👤 Chandan Mahato</span>
+                        <span>📅 February 22, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Filtering Script -->
+    <script>
+        function filterJobs(category) {
+
+            const jobs = document.querySelectorAll('.job-link');
+
+            jobs.forEach(job => {
+                const categories = job.getAttribute('data-category');
+
+                if (category === 'all') {
+                    job.style.display = "block";
+                } 
+                else if (categories && categories.includes(category)) {
+                    job.style.display = "block";
+                } 
+                else {
+                    job.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

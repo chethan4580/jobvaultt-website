@@ -1,0 +1,155 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+/* ================= NAVBAR ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 70px;              /* Fixed navbar height */
+    padding: 0 80px;           /* Only left-right padding */
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo */
+.logo img {
+    height: 180px;              /* Bigger logo */
+    width: auto;
+    display: block;
+}
+
+/* Navigation Links */
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    width: 85%;
+    margin: 40px auto;
+}
+
+/* Make full card clickable */
+.job-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* ================= JOB CARD ================= */
+.job-card {
+    display: flex;
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ================= LEFT SIDE ================= */
+.job-image {
+    width: 27%;
+}
+
+/* Company Image */
+.company-logo,
+.company-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================= RIGHT SIDE ================= */
+.job-content {
+    width: 65%;
+    padding: 30px;
+}
+
+/* Tags */
+.tags span {
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+/* Title */
+.job-content h2 {
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+/* Description */
+.job-content p {
+    color: #444;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+/* Meta */
+.job-meta {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+.job-meta span {
+    margin-right: 15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    .job-card {
+        flex-direction: column;
+    }
+
+    .job-image,
+    .job-content {
+        width: 100%;
+    }
+
+    .company-logo,
+    .company-banner {
+        height: 220px;
+    }
+
+    nav a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+}
