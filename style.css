@@ -315,9 +315,7 @@ body {
     }
 
     .job-content p {
-        font-size: 11px;
-        margin-bottom: 3px;
-        color: #666;
+    display: none;
     }
 
     .job-meta {
