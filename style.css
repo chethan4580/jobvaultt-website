@@ -227,21 +227,70 @@ body {
     height: auto;
     border-radius: 12px;
 }
+/* ================= MATCH TABLE FONT ================= */
 
+.job-details table {
+    font-family: inherit;      /* same font as content */
+}
+
+.job-details table td {
+    font-size: 15px;           /* same as .section p */
+    font-weight: 500;          /* same weight */
+    color: #111;
+}
+
+.job-details table th {
+    font-size: 15px;
+    font-weight: 600;          /* slightly stronger for header */
+    color: #000;
+}
+/* ================= CLEAN STRUCTURED JOB PAGE ================= */
+
+.job-details h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #000;   /* Black line after each section */
+}
+.section p {
+    font-size: 16px;        /* slightly smaller */
+    font-weight: 500;       /* more bold */
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #111;
+    letter-spacing: 0.2px;
+}
+
+.section ul {
+    margin: 12px 0 16px 22px;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 15px;        /* slightly smaller */
+    font-weight: 500;       /* stronger */
+    color: #111;
+    letter-spacing: 0.2px;
+}
 /* Table Styling */
+/* ================= STRONG TABLE BORDERS ================= */
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 table th,
 table td {
-    border: 1px solid #ddd;
+    border: 1.5px solid #000;   /* Dark black lines */
     padding: 10px;
-    text-align: left;
-    font-size: 14px;
 }
 
 table th {
