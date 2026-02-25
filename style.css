@@ -244,8 +244,6 @@ body {
     }
 }
 
-/* ================= TRUE JOBCODE MOBILE STYLE ================= */
-
 @media (max-width: 768px) {
 
     body {
@@ -253,12 +251,21 @@ body {
     }
 
     .navbar {
-        height: 50px;
+        height: 60px;
         padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .logo img {
-        height: 100px;
+        height: 32px;
+    }
+
+    .nav-icons {
+        display: flex;
+        align-items: center;
+        gap: 14px;
     }
 
     .container {
@@ -270,12 +277,12 @@ body {
     .job-card {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 8px 0;
+        margin-bottom: 0;
         box-shadow: none;
         border-radius: 0;
-        border-bottom: 1px solid #e5e5e5;
-        padding: 10px 0;
-        margin-bottom: 0;
     }
 
     .job-image {
@@ -287,18 +294,14 @@ body {
     }
 
     .company-logo {
-    width: 100%;
-    height: 100px;          /* control height */
-    object-fit: contain;   /* prevents distortion */
+        width: 100%;
+        height: 70px;
+        object-fit: contain;
     }
 
     .job-content {
         width: 60%;
         padding: 0;
-    }
-
-    .tags {
-        margin-bottom: 4px;
     }
 
     .tags span {
@@ -315,19 +318,11 @@ body {
     }
 
     .job-content p {
-    display: none;
+        display: none;
     }
 
     .job-meta {
         font-size: 10px;
         margin-top: 2px;
-    }
-
-    .job-details {
-        padding: 18px;
-    }
-
-    .title-image img {
-        width: 100%;
     }
 }
