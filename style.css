@@ -274,7 +274,7 @@ body {
         box-shadow: none;
         border-radius: 0;
         border-bottom: 1px solid #e5e5e5;
-        padding: 8px 0;
+        padding: 14px 0;
         margin-bottom: 0;
     }
 
@@ -287,9 +287,9 @@ body {
     }
 
     .company-logo {
-        max-height: 45px;
-        width: auto;
-        object-fit: contain;
+    width: 100%;
+    height: 85px;          /* control height */
+    object-fit: contain;   /* prevents distortion */
     }
 
     .job-content {
@@ -308,7 +308,7 @@ body {
     }
 
     .job-content h2 {
-        font-size: 13px;
+        font-size: 15px;
         line-height: 1.3;
         margin: 3px 0;
         font-weight: 600;
