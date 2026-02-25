@@ -279,7 +279,7 @@ body {
     }
 
     .job-image {
-        width: 24%;
+        width: 40%;
         padding-right: 8px;
         display: flex;
         align-items: center;
@@ -293,7 +293,7 @@ body {
     }
 
     .job-content {
-        width: 76%;
+        width: 60%;
         padding: 0;
     }
 
