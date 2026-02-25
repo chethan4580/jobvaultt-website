@@ -253,12 +253,12 @@ body {
     }
 
     .navbar {
-        height: 65px;
+        height: 45px;
         padding: 0 15px;
     }
 
     .logo img {
-        height: 70px;
+        height: 80px;
     }
 
     .container {
@@ -274,7 +274,7 @@ body {
         box-shadow: none;
         border-radius: 0;
         border-bottom: 1px solid #e5e5e5;
-        padding: 14px 0;
+        padding: 12px 0;
         margin-bottom: 0;
     }
 
@@ -288,7 +288,7 @@ body {
 
     .company-logo {
     width: 100%;
-    height: 85px;          /* control height */
+    height: 100px;          /* control height */
     object-fit: contain;   /* prevents distortion */
     }
 
