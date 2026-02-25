@@ -12,14 +12,12 @@
 
 <header class="navbar">
 
-    <!-- Logo -->
     <div class="logo">
         <a href="index.html">
             <img src="images/Job-Vaultt-logo.png" alt="JobVaultt">
         </a>
     </div>
 
-    <!-- Desktop Menu -->
     <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="index.html?category=freshers">Freshers</a>
@@ -28,19 +26,11 @@
         <a href="index.html?category=non-it">Non-IT</a>
     </nav>
 
-    <!-- Right Icons -->
     <div class="nav-icons">
-
-        <!-- 🔍 Search now directly redirects -->
-        <div class="search-icon" onclick="goToHome()">
-            🔍
-        </div>
-
+        <div class="search-icon" onclick="goToHome()">🔍</div>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     </div>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="index.html">Home</a>
         <a href="index.html?category=freshers">Freshers</a>
@@ -60,49 +50,72 @@
 </div>
 
 <div class="overview-box">
-<h2>1. Data Analyst – Quick Job Overview</h2>
 
-<table>
-<tr><th>Job Details</th><th>Information</th></tr>
-<tr><td>Role</td><td>Associate – <b>Data Analyst</b></td></tr>
-<tr><td>Company</td><td>AstraZeneca India</td></tr>
-<tr><td>Job Id</td><td>R-246357</td></tr>
-<tr><td>Employment Type</td><td>Full-Time</td></tr>
-<tr><td>Location</td><td>Bengaluru / Chennai</td></tr>
-<tr><td>Industry</td><td>Biopharmaceutical / Healthcare</td></tr>
-<tr><td>Work Model</td><td>Hybrid</td></tr>
-</table>
+    <h2>1. Data Analyst – Quick Job Overview</h2>
 
-<p>This Data Analyst opportunity focuses on predictive analytics, automation, and structured reporting that supports strategic healthcare decisions.</p>
+    <table>
+        <tr>
+            <th>Job Details</th>
+            <th>Information</th>
+        </tr>
+        <tr>
+            <td>Role</td>
+            <td>Associate – <strong>Data Analyst</strong></td>
+        </tr>
+        <tr>
+            <td>Company</td>
+            <td>AstraZeneca India</td>
+        </tr>
+        <tr>
+            <td>Job Id</td>
+            <td>R-246357</td>
+        </tr>
+        <tr>
+            <td>Employment Type</td>
+            <td>Full-Time</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>Bengaluru / Chennai</td>
+        </tr>
+        <tr>
+            <td>Industry</td>
+            <td>Biopharmaceutical / Healthcare</td>
+        </tr>
+        <tr>
+            <td>Work Model</td>
+            <td>Hybrid</td>
+        </tr>
+    </table>
+
+    <p>
+        This Data Analyst opportunity focuses on predictive analytics,
+        automation, and structured reporting that supports strategic healthcare decisions.
+    </p>
 
 </div>
 
-<a href="https://careers.astrazeneca.com/job/-/-/7684/91971107024" 
-   target="_blank" 
+<a href="https://careers.astrazeneca.com/job/-/-/7684/91971107024"
+   target="_blank"
    class="apply-btn">
    Apply Now
 </a>
 
-<br>
-<br>
+<br><br>
+
 <a href="index.html" class="back-link">← Back to Job Listings</a>
 
 </div>
 
-<!-- SCRIPT -->
 <script>
-
-/* Redirect search icon to home */
 function goToHome() {
     window.location.href = "index.html";
 }
 
-/* Mobile Menu */
 function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
     if (menu) menu.classList.toggle("show");
 }
-
 </script>
 
 </body>

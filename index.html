@@ -28,10 +28,9 @@
 
 <div class="nav-icons">
 
-    <!-- Search Wrapper -->
     <div class="search-wrapper">
-        <span class="search-icon" onclick="toggleSearch()">🔍</span>
-        <input type="text" id="searchInput" placeholder="Search jobs...">
+       <span class="search-icon" onclick="toggleSearch(event)">🔍</span>
+       <input type="text" id="searchInput" placeholder="Search jobs...">
     </div>
 
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -136,7 +135,7 @@
 
 </div>
 
-<!-- Script -->
+<!-- ================= SCRIPT ================= -->
 <script>
 
 /* ================= CATEGORY FILTER ================= */
@@ -164,18 +163,23 @@ function filterJobs(category, event) {
     if (menu) menu.classList.remove("show");
 }
 
+
 /* ================= MOBILE MENU ================= */
 function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
     if (menu) menu.classList.toggle("show");
 }
 
+
 /* ================= SEARCH TOGGLE ================= */
-function toggleSearch() {
+function toggleSearch(event) {
+
+    event.stopPropagation();   // Prevent instant closing
+
     const wrapper = document.querySelector(".search-wrapper");
     const input = document.getElementById("searchInput");
 
-    if (!wrapper) return;
+    if (!wrapper || !input) return;
 
     wrapper.classList.toggle("active");
 
@@ -184,47 +188,48 @@ function toggleSearch() {
     }
 }
 
+
 /* ================= SEARCH FUNCTION ================= */
 document.addEventListener("DOMContentLoaded", function() {
 
     const searchInput = document.getElementById("searchInput");
 
-    if (searchInput) {
-        searchInput.addEventListener("keyup", function() {
+    if (!searchInput) return;
 
-            let filter = this.value.toLowerCase();
-            let jobs = document.querySelectorAll(".job-link");
+    searchInput.addEventListener("keyup", function() {
 
-            jobs.forEach(job => {
+        let filter = this.value.toLowerCase();
+        let jobs = document.querySelectorAll(".job-link");
 
-                let titleElement = job.querySelector("h2");
-                if (!titleElement) return;
+        jobs.forEach(job => {
 
-                let title = titleElement.innerText.toLowerCase();
+            let titleElement = job.querySelector("h2");
+            if (!titleElement) return;
 
-                if (title.includes(filter)) {
-                    job.style.display = "block";
-                } else {
-                    job.style.display = "none";
-                }
+            let title = titleElement.innerText.toLowerCase();
 
-            });
+            job.style.display = title.includes(filter) ? "block" : "none";
 
         });
-    }
 
-    /* Close search when clicking outside (WITHOUT resetting jobs) */
-    document.addEventListener("click", function(e) {
-        const wrapper = document.querySelector(".search-wrapper");
-
-        if (!wrapper) return;
-
-        if (!wrapper.contains(e.target)) {
-            wrapper.classList.remove("active");
-        }
     });
 
 });
+
+
+/* ================= CLOSE SEARCH WHEN CLICK OUTSIDE ================= */
+document.addEventListener("click", function(e) {
+
+    const wrapper = document.querySelector(".search-wrapper");
+
+    if (!wrapper) return;
+
+    if (!wrapper.contains(e.target)) {
+        wrapper.classList.remove("active");
+    }
+
+});
+
 </script>
 </body>
 </html>
