@@ -450,7 +450,7 @@ table th {
     .section ul li,
     .job-details ol li,
     .job-details table td {
-    font-weight: 400;        /* keep normal */
+    font-weight: 430;        /* keep normal */
     letter-spacing: 0.3px;   /* slightly spaced */
     color: #1a1a1a;          /* darker than #444 */
     }
