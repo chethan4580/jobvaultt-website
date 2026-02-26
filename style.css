@@ -450,9 +450,16 @@ table th {
     .section ul li,
     .job-details ol li,
     .job-details table td {
-    font-weight: 430;        /* keep normal */
-    letter-spacing: 0.3px;   /* slightly spaced */
-    color: #1a1a1a;          /* darker than #444 */
+        font-weight: 450;   /* reduce from 500 */
     }
+    .section p,
+    .section ul li {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 450;
+    color: #111;
+    line-height: 1.7;
+}
+
 }
 }
