@@ -227,6 +227,21 @@ body {
     height: auto;
     border-radius: 12px;
 }
+/* ================= FIX OL FONT ================= */
+
+.job-details ol {
+    font-family: inherit;
+    margin: 12px 0 18px 22px;
+}
+
+.job-details ol li {
+    font-family: inherit;
+    font-size: 15px;      /* match your paragraph size */
+    font-weight: 500;     /* same as .section p */
+    line-height: 1.7;
+    color: #111;
+    margin-bottom: 8px;
+}
 /* ================= MATCH TABLE FONT ================= */
 
 .job-details table {
@@ -256,7 +271,7 @@ body {
 .section {
     margin-bottom: 30px;
     padding-bottom: 25px;
-    border-bottom: 2px solid #000;   /* Black line after each section */
+    border-bottom: 1px solid #000;   /* Black line after each section */
 }
 .section p {
     font-size: 16px;        /* slightly smaller */
@@ -429,4 +444,14 @@ table th {
         padding: 8px;
         font-size: 13px;
     }
+    @media (max-width: 768px) {
+
+    .section p,
+    .section ul li,
+    .job-details ol li,
+    .job-details table td {
+        font-weight: 400;   /* reduce from 500 */
+    }
+
+}
 }
