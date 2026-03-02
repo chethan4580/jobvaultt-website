@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | JobVaultt</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/Job-Vaultt-logo.png" alt="JobVaultt">
+        </a>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html?category=freshers">Freshers</a>
+        <a href="index.html?category=internships">Internships</a>
+        <a href="index.html?category=experienced">Experienced</a>
+        <a href="index.html?category=non-it">Non-IT</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-icons">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+</header>
+
+
+<div class="container contact-page">
+
+    <h1>Contact Us</h1>
+
+    <p class="contact-intro">
+        Have questions, suggestions, or partnership inquiries? 
+        We’d love to hear from you.
+    </p>
+
+    <div class="contact-box">
+
+        <div class="contact-item">
+            <h3>Email</h3>
+            <p>support@jobvaultt.com</p>
+        </div>
+
+        <div class="contact-item">
+            <h3>Business Enquiries</h3>
+            <p>business@jobvaultt.com</p>
+        </div>
+
+        <div class="contact-item">
+            <h3>Location</h3>
+            <p>Bengaluru, India</p>
+        </div>
+
+    </div>
+
+    <hr class="contact-divider">
+
+    <h2>Send Us a Message</h2>
+
+    <form class="contact-form">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="apply-btn">Send Message</button>
+
+    </form>
+
+</div>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if (menu) menu.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
