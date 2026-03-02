@@ -446,16 +446,12 @@ table th {
     }
     @media (max-width: 768px) {
 
-    /* Reduce only content text (not headings) */
-
     .section p,
     .section ul li,
     .job-details ol li,
     .job-details table td {
-         
-       font-size: 14px;      /* reduce from 15px */
-       font-weight: 450;     /* keep clean */
-}
+        font-weight: 450;   /* reduce from 500 */
+    }
     
 
 }
